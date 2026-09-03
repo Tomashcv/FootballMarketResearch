@@ -1,5 +1,6 @@
 numpy
 pandas
+tabulate
 pyarrow
 scikit-learn
 xgboost
