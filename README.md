@@ -148,6 +148,7 @@ Python 3.12+ is recommended.
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
+python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
 python -m pip install -r requirements.txt
 
 python -m compileall -q src scripts

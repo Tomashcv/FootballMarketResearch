@@ -21,6 +21,8 @@ data/processed/**
 !data/processed/v4/v4_model_feature_groups_v1.json
 outputs/
 models/
+!src/v4/models/
+!src/v4/models/*.py
 logs/
 
 # Local tools / assistants
