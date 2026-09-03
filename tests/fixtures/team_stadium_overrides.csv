@@ -1,0 +1,33 @@
+team,stadium,city,country,latitude,longitude,source,confidence,notes
+Bournemouth,Synthetic Bournemouth Ground,Synthetic City,Testland,10.0,20.0,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Brentford,Gtech Community Stadium,Synthetic City,Testland,10.01,20.01,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Huddersfield,Synthetic Huddersfield Ground,Synthetic City,Testland,10.02,20.02,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Luton,Synthetic Luton Ground,Synthetic City,Testland,10.03,20.03,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Sheffield United,Synthetic Sheffield United Ground,Synthetic City,Testland,10.04,20.04,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Alaves,Synthetic Alaves Ground,Synthetic City,Testland,10.05,20.05,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Cadiz,Synthetic Cadiz Ground,Synthetic City,Testland,10.06,20.06,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Eibar,Synthetic Eibar Ground,Synthetic City,Testland,10.07,20.07,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Girona,Synthetic Girona Ground,Synthetic City,Testland,10.08,20.08,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Huesca,Synthetic Huesca Ground,Synthetic City,Testland,10.09,20.09,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Las Palmas,Estadio de Gran Canaria,Synthetic City,Testland,10.1,20.1,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Leganes,Synthetic Leganes Ground,Synthetic City,Testland,10.11,20.11,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Cordoba,Synthetic Cordoba Ground,Synthetic City,Testland,10.12,20.12,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Hercules,Synthetic Hercules Ground,Synthetic City,Testland,10.13,20.13,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Bielefeld,Synthetic Bielefeld Ground,Synthetic City,Testland,10.14,20.14,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Bochum,Synthetic Bochum Ground,Synthetic City,Testland,10.15,20.15,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Darmstadt,Synthetic Darmstadt Ground,Synthetic City,Testland,10.16,20.16,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Heidenheim,Synthetic Heidenheim Ground,Synthetic City,Testland,10.17,20.17,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Holstein Kiel,Synthetic Holstein Kiel Ground,Synthetic City,Testland,10.18,20.18,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+RB Leipzig,Red Bull Arena,Synthetic City,Testland,10.19,20.19,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Union Berlin,An der Alten Försterei,Synthetic City,Testland,10.2,20.2,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Ingolstadt,Synthetic Ingolstadt Ground,Synthetic City,Testland,10.21,20.21,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Paderborn,Synthetic Paderborn Ground,Synthetic City,Testland,10.22,20.22,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Angers,Synthetic Angers Ground,Synthetic City,Testland,10.23,20.23,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Clermont,Synthetic Clermont Ground,Synthetic City,Testland,10.24,20.24,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Le Havre,Stade Océane,Synthetic City,Testland,10.25,20.25,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Lens,Stade Bollaert-Delelis,Synthetic City,Testland,10.26,20.26,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Metz,Synthetic Metz Ground,Synthetic City,Testland,10.27,20.27,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Nimes,Synthetic Nimes Ground,Synthetic City,Testland,10.28,20.28,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Strasbourg,Synthetic Strasbourg Ground,Synthetic City,Testland,10.29,20.29,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Ajaccio GFCO,Synthetic Ajaccio GFCO Ground,Synthetic City,Testland,10.3,20.3,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.
+Amiens,Synthetic Amiens Ground,Synthetic City,Testland,10.31,20.31,data/external/stadiums/world_soccer_stadiums.json,high,Synthetic public test fixture; not research data.

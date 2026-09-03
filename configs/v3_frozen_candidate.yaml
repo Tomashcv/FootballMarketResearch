@@ -1,0 +1,46 @@
+candidate_name: frozen_v3_1x2_away_research_only
+classification: research_only
+scope: scope_C_top_divisions_ex_e1_e2_e3
+model:
+  name: xgboost_market_residual_multiclass
+  path: null
+  reconstruction_reference:
+    script: scripts/run_v3_exact_reproduction.py
+    model_function: src.experiments.feature_matrix_v2_tm_1x2_predictive_audit.model_predict
+    training_policy: train on cleaned historical seasons strictly before the paper season; never fit on current-season outcomes
+feature_group: v3_tm_plus_clubelo_core_staleness
+feature_contract:
+  path: outputs/reports/football_data_full_scope_external/v3_feature_contract_recovered.csv
+  feature_count: 220
+  feature_list_sha256: df8eca70402928cb46091267767584f757e3bcd8c4d851484c94f93425b621e3
+rule:
+  name: away_edge_ge_0.015_away_odds_ge_1.5
+  selected_side: away
+  away_edge_min: 0.015
+  away_odds_min: 1.5
+  stake_units: 1.0
+allowed_leagues:
+  - E0
+  - SP1
+  - D1
+  - I1
+  - F1
+  - B1
+  - G1
+  - N1
+  - P1
+  - SC0
+  - T1
+excluded_leagues:
+  - E1
+  - E2
+  - E3
+betting_mode:
+  paper_only: true
+  live_betting: false
+  real_money: false
+  confirmed_edge_claim: false
+labels:
+  - research_only
+  - no_confirmed_edge
+  - no_live_betting

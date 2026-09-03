@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="180" viewBox="0 0 1160 180" role="img" aria-labelledby="title desc">
+<title id="title">Football Market Research pipeline</title>
+<desc id="desc">Source data is canonicalized, converted to point-in-time features, validated temporally against market baselines and only then allowed into paper tracking.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#9ca3af"/></marker></defs>
+<rect x="35.0" y="50" width="160" height="72" rx="10" fill="#1f2937" stroke="#6b7280" stroke-width="2"/>
+<text x="115.0" y="91.0" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="14.5" font-weight="600" text-anchor="middle">Source Data</text>
+<line x1="198.0" y1="86.0" x2="216.0" y2="86.0" stroke="#9ca3af" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="221.0" y="50" width="160" height="72" rx="10" fill="#1f2937" stroke="#6b7280" stroke-width="2"/>
+<text x="301.0" y="91.0" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="14.5" font-weight="600" text-anchor="middle">Canonical IDs</text>
+<line x1="384.0" y1="86.0" x2="402.0" y2="86.0" stroke="#9ca3af" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="407.0" y="50" width="160" height="72" rx="10" fill="#1f2937" stroke="#6b7280" stroke-width="2"/>
+<text x="487.0" y="81.0" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="14.5" font-weight="600" text-anchor="middle">Point-in-Time</text>
+<text x="487.0" y="101.0" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="14.5" font-weight="600" text-anchor="middle">Features</text>
+<line x1="570.0" y1="86.0" x2="588.0" y2="86.0" stroke="#9ca3af" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="593.0" y="50" width="160" height="72" rx="10" fill="#1f2937" stroke="#6b7280" stroke-width="2"/>
+<text x="673.0" y="91.0" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="14.5" font-weight="600" text-anchor="middle">Nested Validation</text>
+<line x1="756.0" y1="86.0" x2="774.0" y2="86.0" stroke="#9ca3af" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="779.0" y="50" width="160" height="72" rx="10" fill="#1f2937" stroke="#6b7280" stroke-width="2"/>
+<text x="859.0" y="91.0" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="14.5" font-weight="600" text-anchor="middle">Market Baseline</text>
+<line x1="942.0" y1="86.0" x2="960.0" y2="86.0" stroke="#9ca3af" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="965.0" y="50" width="160" height="72" rx="10" fill="#1f2937" stroke="#6b7280" stroke-width="2"/>
+<text x="1045.0" y="91.0" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="14.5" font-weight="600" text-anchor="middle">Paper Tracking</text>
+</svg>

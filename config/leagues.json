@@ -1,0 +1,58 @@
+{
+  "E0": {
+    "name": "Premier League",
+    "country": "England",
+    "football_data_code": "E0",
+    "start_season": "2010-2011",
+    "active": true
+  },
+  "E1": {
+    "name": "Championship",
+    "country": "England",
+    "football_data_code": "E1",
+    "start_season": "2010-2011",
+    "active": true
+  },
+  "E2": {
+    "name": "Division 2",
+    "country": "England",
+    "football_data_code": "E2",
+    "start_season": "2010-2011",
+    "active": true
+  },
+  "E3": {
+    "name": "Division 3",
+    "country": "England",
+    "football_data_code": "E3",
+    "start_season": "2010-2011",
+    "active": true
+  },
+  "SP1": {
+    "name": "La Liga",
+    "country": "Spain",
+    "football_data_code": "SP1",
+    "start_season": "2010-2011",
+    "active": true
+  },
+  "I1": {
+    "name": "Serie A",
+    "country": "Italy",
+    "football_data_code": "I1",
+    "start_season": "2010-2011",
+    "active": true
+  },
+  "D1": {
+    "name": "Bundesliga",
+    "country": "Germany",
+    "football_data_code": "D1",
+    "start_season": "2010-2011",
+    "active": true
+  },
+  "F1": {
+    "name": "Ligue 1",
+    "country": "France",
+    "football_data_code": "F1",
+    "start_season": "2010-2011",
+    "active": true
+  }
+}

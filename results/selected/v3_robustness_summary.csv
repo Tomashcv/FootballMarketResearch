@@ -1,0 +1,2 @@
+bets,profit,roi,z_score,max_drawdown,average_odds,average_edge,prediction_rows,positive_seasons,positive_leagues,profit_excluding_best_season,profit_excluding_best_league,best_season_profit_share,best_league_profit_share,paper_tracking_ready,decision,classification
+989,56.14999999999999,0.056774519716885734,1.8206704655423265,-23.03,1.9822750252780588,0.017963275814685046,12760,3,6,22.57999999999999,30.179999999999993,0.5978628673196795,0.46251113089937673,False,v3_robustness_ready_for_2025_clean_validation_research_only,research_only

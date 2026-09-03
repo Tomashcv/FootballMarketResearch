@@ -1,0 +1,2 @@
+prediction_rows,bets,profit,roi,z_score,max_drawdown,average_odds,average_edge,eligible_matches,available_scope_leagues,decision,classification
+3026,248,1.2800000000000016,0.005161290322580651,0.08404126783955088,-8.22,1.9319758064516128,0.02414603257985275,3026,11,v3_2025_validation_neutral_inconclusive,research_only

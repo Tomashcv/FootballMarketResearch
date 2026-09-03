@@ -1,0 +1,161 @@
+{
+  "classification": "research_only",
+  "include_current_season": true,
+  "seed": 17,
+  "bootstrap_iterations": 2000,
+  "outer_test_years": [2021, 2022, 2023, 2024, 2025],
+  "tune_lag_years": 2,
+  "calibration_lag_years": 1,
+  "min_train_rows": 3000,
+  "excluded_leagues": ["E1", "E2", "E3"],
+  "feature_contract_sha256": "",
+  "paths": {
+    "historical_exact_input": "data/processed/super_csvs/research_ready_plus/football_data_full_scope/super_1x2_football_data_full_scope_v3_exact_research_v1.csv",
+    "feature_contract": "outputs/reports/football_data_full_scope_external/v3_feature_contract_recovered.csv",
+    "output_dir": "outputs/reports/v3_next_research"
+  },
+  "predictive_gate": {
+    "max_delta_log_loss": 0.0,
+    "max_delta_brier": 0.0005,
+    "max_delta_ece": 0.01
+  },
+  "calibration_grid": {
+    "alphas": [0.0, 0.1, 0.2, 0.35, 0.5, 0.7, 1.0],
+    "temperatures": [0.8, 0.9, 1.0, 1.1, 1.25]
+  },
+  "value_rule_grid": {
+    "sides": ["away"],
+    "edge_thresholds": [0.01, 0.015, 0.02, 0.025, 0.03],
+    "odds_minima": [1.5, 1.7, 1.9],
+    "odds_maxima": [null, 2.25, 2.75, 3.5],
+    "min_validation_bets": 35,
+    "require_positive_lcb": false,
+    "minimum_positive_leagues": 2,
+    "max_positive_league_share": 0.7
+  },
+  "model_grid": [
+    {
+      "name": "raw_market",
+      "family": "raw_market",
+      "feature_group": "market_only",
+      "params": {}
+    },
+    {
+      "name": "legacy_v3_residual_all",
+      "family": "xgb_market_residual",
+      "feature_group": "legacy_all",
+      "recency_half_life_years": null,
+      "league_balance_strength": 0.0,
+      "params": {
+        "max_depth": 2,
+        "eta": 0.03,
+        "subsample": 0.85,
+        "colsample_bytree": 0.85,
+        "lambda": 8.0,
+        "alpha": 0.5,
+        "min_child_weight": 15,
+        "num_boost_round": 35,
+        "early_stopping_rounds": null,
+        "native_missing": false
+      }
+    },
+    {
+      "name": "residual_native_d1_external_recency4",
+      "family": "xgb_market_residual",
+      "feature_group": "external_residual_only",
+      "recency_half_life_years": 4.0,
+      "league_balance_strength": 0.25,
+      "params": {
+        "max_depth": 1,
+        "eta": 0.025,
+        "subsample": 0.9,
+        "colsample_bytree": 0.8,
+        "lambda": 18.0,
+        "alpha": 1.0,
+        "min_child_weight": 20,
+        "num_boost_round": 220,
+        "early_stopping_rounds": 25,
+        "native_missing": true
+      }
+    },
+    {
+      "name": "residual_native_d2_core_recency4",
+      "family": "xgb_market_residual",
+      "feature_group": "market_context_core",
+      "recency_half_life_years": 4.0,
+      "league_balance_strength": 0.25,
+      "params": {
+        "max_depth": 2,
+        "eta": 0.02,
+        "subsample": 0.9,
+        "colsample_bytree": 0.8,
+        "lambda": 14.0,
+        "alpha": 0.8,
+        "min_child_weight": 20,
+        "num_boost_round": 240,
+        "early_stopping_rounds": 25,
+        "native_missing": true
+      }
+    },
+    {
+      "name": "residual_native_d2_elo_core_recency2",
+      "family": "xgb_market_residual",
+      "feature_group": "elo_market_core",
+      "recency_half_life_years": 2.0,
+      "league_balance_strength": 0.35,
+      "params": {
+        "max_depth": 2,
+        "eta": 0.02,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "lambda": 20.0,
+        "alpha": 1.25,
+        "min_child_weight": 25,
+        "num_boost_round": 240,
+        "early_stopping_rounds": 25,
+        "native_missing": true
+      }
+    },
+    {
+      "name": "residual_native_d3_external_heavy_reg",
+      "family": "xgb_market_residual",
+      "feature_group": "external_residual_only",
+      "recency_half_life_years": 4.0,
+      "league_balance_strength": 0.35,
+      "params": {
+        "max_depth": 3,
+        "eta": 0.015,
+        "subsample": 0.85,
+        "colsample_bytree": 0.75,
+        "lambda": 25.0,
+        "alpha": 1.5,
+        "min_child_weight": 30,
+        "num_boost_round": 300,
+        "early_stopping_rounds": 30,
+        "native_missing": true
+      }
+    },
+    {
+      "name": "ridge_market_plus_elo_core",
+      "family": "logistic_market_plus_features",
+      "feature_group": "elo_market_core",
+      "recency_half_life_years": 4.0,
+      "league_balance_strength": 0.25,
+      "params": {
+        "C": 0.03,
+        "max_iter": 2000
+      }
+    },
+    {
+      "name": "ridge_market_plus_context_core",
+      "family": "logistic_market_plus_features",
+      "feature_group": "market_context_core",
+      "recency_half_life_years": 4.0,
+      "league_balance_strength": 0.25,
+      "params": {
+        "C": 0.015,
+        "max_iter": 2000
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "over_under_25": {
+    "name": "Over/Under 2.5 Goals",
+    "type": "binary",
+    "active": true,
+    "output_folder": "over_under_25",
+    "target_column": "target_over_25"
+  }
+}

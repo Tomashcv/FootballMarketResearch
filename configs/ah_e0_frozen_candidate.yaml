@@ -1,0 +1,27 @@
+candidate_name: frozen_e0_asian_handicap_away_big_home_favourite_research_only
+classification: research_only
+league: E0
+market: Asian Handicap
+rule:
+  name: home_ah_line_le_-1.25_select_away
+  home_ah_line_max: -1.25
+  selected_side: away
+  stake_units: 1.0
+odds:
+  home_handicap_line_column: AHh
+  away_odds_column: AvgAHA
+  home_odds_column: AvgAHH
+  note: Do not use 1X2 odds as Asian Handicap odds.
+betting_mode:
+  paper_only: true
+  live_betting: false
+  real_money: false
+  api_keys_required: false
+  confirmed_edge_claim: false
+training_policy:
+  retraining: false
+  threshold_optimization: false
+labels:
+  - research_only
+  - no_confirmed_edge
+  - no_live_betting
