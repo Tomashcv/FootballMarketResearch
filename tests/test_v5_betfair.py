@@ -133,14 +133,61 @@ def test_catalog_checkpoint_resume(tmp_path, monkeypatch, stream):
 def test_locked_e0_mapping_orientation(tmp_path, monkeypatch):
     pytest.importorskip("pyarrow")
     import src.v5_betfair.pipeline as pipeline
-    monkeypatch.setattr(pipeline,"MARKET_MAP",tmp_path/"map.parquet")
-    monkeypatch.setattr(pipeline,"REPORTS",tmp_path)
-    catalog=pd.DataFrame([{"market_id":"x","event_id":"x","source_file":"x","event_name":"Manchester Utd v Tottenham",
-      "market_time_utc":"2015-08-08T13:45:00Z","country_code":"GB","market_type":"MATCH_ODDS",
-      "runner_names":["Manchester Utd","Tottenham","The Draw"],"runner_ids":[100,200,300]}])
-    mapped=pipeline.phase2(catalog)
-    row=mapped.iloc[0]
-    assert bool(row.approved_unique) and row.home_runner_id==100 and row.away_runner_id==200 and row.draw_runner_id==300
+
+    monkeypatch.setattr(pipeline, "MARKET_MAP", tmp_path / "map.parquet")
+    monkeypatch.setattr(pipeline, "REPORTS", tmp_path)
+
+    # The public repository intentionally excludes the locked local entity
+    # registry. Exercise the same orientation logic with a minimal synthetic
+    # registry so this test remains offline and reproducible.
+    matches = pd.DataFrame([{
+        "canonical_match_id": "fixture-1",
+        "competition_id": 1,
+        "match_datetime": "2015-08-08T13:45:00Z",
+        "season_start_year": 2015,
+        "home_team_id": 1,
+        "away_team_id": 2,
+        "home_team_name_audit": "Manchester Utd",
+        "away_team_name_audit": "Tottenham",
+    }])
+    matches["fixture_dt"] = pd.to_datetime(
+        matches["match_datetime"], utc=True
+    )
+
+    aliases = {
+        normalize_team("Manchester Utd"): {1},
+        normalize_team("Tottenham"): {2},
+    }
+    canonical = {
+        1: "Manchester United",
+        2: "Tottenham Hotspur",
+    }
+
+    monkeypatch.setattr(
+        pipeline,
+        "_locked_e0",
+        lambda: (matches, aliases, canonical),
+    )
+
+    catalog = pd.DataFrame([{
+        "market_id": "x",
+        "event_id": "x",
+        "source_file": "x",
+        "event_name": "Manchester Utd v Tottenham",
+        "market_time_utc": "2015-08-08T13:45:00Z",
+        "country_code": "GB",
+        "market_type": "MATCH_ODDS",
+        "runner_names": ["Manchester Utd", "Tottenham", "The Draw"],
+        "runner_ids": [100, 200, 300],
+    }])
+
+    mapped = pipeline.phase2(catalog)
+    row = mapped.iloc[0]
+
+    assert bool(row.approved_unique)
+    assert row.home_runner_id == 100
+    assert row.away_runner_id == 200
+    assert row.draw_runner_id == 300
 
 
 def test_duplicate_market_catalog_flag(tmp_path, monkeypatch):
